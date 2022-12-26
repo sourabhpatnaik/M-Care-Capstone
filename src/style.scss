@@ -1,0 +1,530 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;400;500;700&display=swap');
+
+
+
+@mixin mobile {
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: 1079px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (min-width: 1080px) {
+    @content;
+  }
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  font-family: 'Mukta', sans-serif;;
+}
+
+$primary-blue: #233975;
+$mainColor: #29335c;
+$mainColorLight: #646f99;
+$secondaryColor: #db2b39;
+$textColor: #e45858;
+$textColor-1: #543ec2;
+$button: #6246ea;
+$fontFamily: 'Mukta', sans-serif;
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+a {
+  text-decoration: none;
+  color: $mainColorLight;
+}
+a:hover {
+  text-decoration: underline;
+}
+.small {
+  font-size: 80%;
+  text-align: center;
+}
+
+/************************************************************************** Register PAGE SYLING ***********************************************************/
+.register-container {
+  display: flex;
+  flex-direction: column;
+
+  @include laptop {
+    flex-direction: row;
+    min-height: 100vh;
+  }
+}
+
+// LEFT SECTION STYLING
+.left-1 {
+  height: 400px;
+}
+@include mobile {
+  .left-1 {
+    height: 200px;
+  }
+}
+
+.left-1,
+.right-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include laptop {
+    display: flex;
+    height: auto;
+    width: 50%;
+  }
+}
+
+.left-1 {
+  background: url("./images/left-img-1.png");
+  background-size: cover;
+
+  .copy {
+    color: white;
+    text-align: center;
+  }
+  h1 {
+    position: absolute;
+    font-size: 2.5rem;
+    top: 20%;
+    left: 30%;
+    color: $textColor;
+  }
+
+  p {
+    position: absolute;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: $textColor;
+    left: 33%;
+    top: 30%;
+  }
+
+  // RESPONSIVE FOR TABLET
+  @include tablet {
+    h1 {
+      position: fixed;
+      font-size: 2.5rem;
+      top: 13%;
+      left: 54%;
+    }
+
+    p {
+      position: fixed;
+      top: 18%;
+      left: 60%;
+    }
+  }
+
+  // RESPONSIVE FOR MOBILE
+  @include mobile {
+    h1 {
+      position: fixed;
+      font-size: 1.8rem;
+      text-shadow: 2px 2px 4px $textColor-1;
+      color: white;
+      top: 8%;
+      left: 20%;
+    }
+
+    p {
+      position: fixed;
+      font-size: 1rem;
+      text-shadow: 2px 2px 4px $textColor-1;
+      top: 12%;
+      left: 25%;
+    }
+  }
+}
+
+// RIGHT SECTION STYLING
+.right-1 {
+  background: white;
+  .copy {
+    color: $textColor;
+    text-align: center;
+
+    p {
+      margin: 1.5em 0;
+      font-size: 0.875rem;
+      padding-bottom: 3rem;
+    }
+  }
+
+  form {
+    margin-top: 20%;
+    width: 328px;
+    background-color: #d1d1e9;
+    padding: 1rem 2rem;
+    border-radius: 0.8rem;
+    box-shadow: 8px 6px 10px -1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 8px 6px 10px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 8px 6px 10px -1px rgba(0, 0, 0, 0.75);
+
+    input[type="text"],
+    input[type="adhaar"],
+    input[type="password"] {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      border-radius: 8px;
+      border: 1px solid #c4c4c4;
+      padding: 1em;
+      margin-bottom: 1.25rem;
+      font-size: 0.875rem;
+      color: $textColor-1;
+      outline: none;
+
+      &::placeholder {
+        color: #d1d1e9;
+      }
+      &:focus {
+        background-color: #ffefef;
+      }
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      color: $textColor;
+    }
+
+    .reg-btn {
+      display: block;
+      width: 100%;
+      background-color: $button;
+      color: #fffffe;
+      font-weight: 700;
+      border: none;
+      padding: 1rem;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+
+      &:hover {
+        background-color: #503abc;
+        cursor: pointer;
+      }
+    }
+  }
+
+  @include tablet {
+    form {
+      margin-top: 3rem;
+    }
+  }
+}
+
+/*************************************************************************** LOGIN PAGE STYLING ***************************************************************************************/
+
+.login-container {
+  display: flex;
+  flex-direction: column-reverse;
+
+  @include laptop {
+    flex-direction: row;
+    min-height: 100vh;
+  }
+}
+
+// ******************* RIGHT CONTAINER STYLING *******************
+.right {
+  height: 400px;
+}
+@include mobile {
+  .right {
+    height: 200px;
+  }
+}
+
+.left,
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include laptop {
+    display: flex;
+    height: auto;
+    width: 50%;
+  }
+}
+
+.right {
+  background: url("./images/right-img-1.png");
+  background-size: cover;
+
+  .copy {
+    color: white;
+    text-align: center;
+  }
+  h1 {
+    position: absolute;
+    font-size: 2.5rem;
+    top: 20%;
+    right: 30%;
+    color: $textColor;
+  }
+
+  p {
+    position: absolute;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: $textColor;
+    right: 33%;
+    top: 30%;
+  }
+
+  // RESPONSIVE FOR TABLET
+  @include tablet {
+    h1 {
+      position: fixed;
+      font-size: 2.5rem;
+      top: 13%;
+      left: -22%;
+    }
+
+    p {
+      position: fixed;
+      top: 18%;
+      left: -20%;
+    }
+  }
+
+  // RESPONSIVE FOR MOBILE
+  @include mobile {
+    h1 {
+      position: fixed;
+      font-size: 1.4rem;
+      text-shadow: 2px 2px 4px $textColor-1;
+      color: white;
+      top: 9%;
+      left: 20%;
+    }
+
+    p {
+      position: fixed;
+      font-size: 0.9rem;
+      text-shadow: 2px 2px 4px $textColor-1;
+      top: 12%;
+      left: 25%;
+    }
+  }
+}
+
+// ******************* LEFT CONTAINER STYLING *******************
+
+.left {
+  background: white;
+  height: auto;
+
+  .copy {
+    color: $textColor;
+    text-align: center;
+
+    p {
+      margin: 1.5em 0;
+      font-size: 0.875rem;
+      padding-bottom: 3rem;
+    }
+  }
+
+  form {
+    margin-top: 20%;
+    width: 328px;
+    background-color: #d1d1e9;
+    padding: 1rem 2rem;
+    border-radius: 0.8rem;
+    box-shadow: -8px 8px 10px -1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -8px 8px 10px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -8px 8px 10px -1px rgba(0, 0, 0, 0.75);
+
+    input[type="text"],
+    input[type="adhaar"],
+    input[type="password"] {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      border-radius: 8px;
+      border: 1px solid #c4c4c4;
+      padding: 1em;
+      margin-bottom: 1.25rem;
+      font-size: 0.875rem;
+      color: $textColor-1;
+      outline: none;
+
+      &::placeholder {
+        color: #d1d1e9;
+      }
+
+      &:focus {
+        background-color: #ffefef;
+      }
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      color: $textColor;
+    }
+
+    .reg-btn {
+      display: block;
+      width: 100%;
+      background-color: $button;
+      color: #fffffe;
+      font-weight: 700;
+      border: none;
+      padding: 1rem;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+
+      &:hover {
+        background-color: #503abc;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/*************************************************************************** HOME PAGE STYLING ***************************************************************************************/
+.nav-container {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.8);
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0 2rem;
+  background-color: #e45858;
+  color: $textColor-1;
+
+  nav a {
+    margin: 0 2rem;
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      color: #d1d1e9;
+    }
+  }
+
+  .nav-btn {
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: $textColor-1;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 1.8rem;
+
+    //Responsive query for mobile devices
+    @include mobile {
+      visibility: visible;
+      opacity: 1;
+    }
+    @include tablet {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+// Responsive Design
+@include mobile {
+  header {
+    height: 40px;
+    position: fixed;
+    top: 0;
+    width: 90%;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: $mainColor;
+    transition: 1s;
+    transform: translateY(-100vh);
+
+    .nav-close-btn {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+    }
+  }
+
+  .responsive_nav {
+    transform: none;
+  }
+
+  nav a {
+    font-size: 1.5rem;
+  }
+}
+
+@include tablet {
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: $mainColor;
+    transition: 1s;
+    transform: translateY(-100vh);
+
+    .nav-close-btn {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+    }
+  }
+
+  .responsive_nav {
+    transform: none;
+  }
+
+  nav a {
+    font-size: 1.5rem;
+  }
+}
