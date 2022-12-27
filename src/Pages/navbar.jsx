@@ -15,9 +15,9 @@ function Navbar() {
       <header>
         <h3>LOGO</h3>
         <nav ref={navRef}>
-          <NavLink to='/Home'>Home</NavLink>
-          <NavLink to="/#">About Us</NavLink>
-          <NavLink to="/#">Services</NavLink>
+          <NavLink to='/'>Home</NavLink>
+          <a href="/aboutus">About Us</a>
+          <NavLink to="/Service">Services</NavLink>
           <NavLink to="/Register">Register</NavLink>
           <NavLink to="/Login">Login</NavLink>
           {/* <a href="/Home">Home</a>

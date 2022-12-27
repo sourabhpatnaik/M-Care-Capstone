@@ -1,9 +1,12 @@
 import { Route, Routes } from 'react-router-dom';
 import Register from './Register';
+import { Link } from 'react-router-dom';
+import AnimatedPage from './AnimatedPage';
 
 
 function Login() {
   return (
+    <AnimatedPage>
     <div className="login-container">
       <div className="left">
       <form action="#">
@@ -58,6 +61,7 @@ function Login() {
       </div>
 
     </div>
+    </AnimatedPage>
   );
 }
 

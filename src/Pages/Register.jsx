@@ -1,14 +1,18 @@
 import { Route, Routes } from 'react-router-dom';
 import Login from './Login';
+import { NavLink } from 'react-router-dom';
+import AnimatedPage from './AnimatedPage';
+
 
 function Register() {
   return (
-    <div className="register-container">
+    <AnimatedPage>
+    <div className="register-container" >
       
       {/* LEFT CONTAINER */}
       <div className="left-1">
         <section className="copy">
-          <h1>Welcome to M-Care</h1>
+          <h1>Welcome to <span>M-Care</span></h1>
           <p>All your Health tools in One Place</p>
         </section>
       </div>
@@ -61,7 +65,10 @@ function Register() {
           </section>
         </form>
       </div>
+
+
     </div>
+    </AnimatedPage>
   );
 }
 

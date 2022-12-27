@@ -73,7 +73,7 @@ a:hover {
 }
 @include mobile {
   .left-1 {
-    height: 200px;
+    height: 250px;
   }
 }
 
@@ -93,6 +93,10 @@ a:hover {
 .left-1 {
   background: url("./images/left-img-1.png");
   background-size: cover;
+
+  // span{
+  //   color: #503abc;
+  // }
 
   .copy {
     color: white;
@@ -134,19 +138,19 @@ a:hover {
   // RESPONSIVE FOR MOBILE
   @include mobile {
     h1 {
-      position: fixed;
+      position: relative;
       font-size: 1.8rem;
       text-shadow: 2px 2px 4px $textColor-1;
       color: white;
-      top: 8%;
+      top: 10px;
       left: 20%;
     }
 
     p {
-      position: fixed;
+      position: relative;
       font-size: 1rem;
       text-shadow: 2px 2px 4px $textColor-1;
-      top: 12%;
+      top: -20px;
       left: 25%;
     }
   }
@@ -162,12 +166,12 @@ a:hover {
     p {
       margin: 1.5em 0;
       font-size: 0.875rem;
-      padding-bottom: 3rem;
+      padding-bottom: 1rem;
     }
   }
 
   form {
-    margin-top: 20%;
+    margin-top: 0%;
     width: 328px;
     background-color: #d1d1e9;
     padding: 1rem 2rem;
@@ -176,6 +180,7 @@ a:hover {
     -webkit-box-shadow: 8px 6px 10px -1px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 8px 6px 10px -1px rgba(0, 0, 0, 0.75);
 
+    
     input[type="text"],
     input[type="adhaar"],
     input[type="password"] {
@@ -201,13 +206,14 @@ a:hover {
     label {
       display: block;
       margin-bottom: 0.5rem;
-      font-size: 1rem;
+      font-size: 1.2rem;
       color: $textColor;
     }
 
     .reg-btn {
       display: block;
-      width: 100%;
+      margin: 0 auto;
+      width: 50%;
       background-color: $button;
       color: #fffffe;
       font-weight: 700;
@@ -217,6 +223,7 @@ a:hover {
       font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 0.5px;
+      margin-top: 3.5rem;
 
       &:hover {
         background-color: #503abc;
@@ -250,7 +257,7 @@ a:hover {
 }
 @include mobile {
   .right {
-    height: 200px;
+    height: 250px;
   }
 }
 
@@ -270,6 +277,7 @@ a:hover {
 .right {
   background: url("./images/right-img-1.png");
   background-size: cover;
+
 
   .copy {
     color: white;
@@ -311,20 +319,18 @@ a:hover {
   // RESPONSIVE FOR MOBILE
   @include mobile {
     h1 {
-      position: fixed;
+      position: relative;
       font-size: 1.4rem;
       text-shadow: 2px 2px 4px $textColor-1;
-      color: white;
-      top: 9%;
-      left: 20%;
+      color: $textColor;
+      top: 15px;
     }
 
     p {
-      position: fixed;
+      position: relative;
       font-size: 0.9rem;
       text-shadow: 2px 2px 4px $textColor-1;
-      top: 12%;
-      left: 25%;
+      top: 10px;
     }
   }
 }
@@ -342,12 +348,12 @@ a:hover {
     p {
       margin: 1.5em 0;
       font-size: 0.875rem;
-      padding-bottom: 3rem;
+      padding-bottom: 1rem;
     }
   }
 
   form {
-    margin-top: 20%;
+    margin-top: -5%;
     width: 328px;
     background-color: #d1d1e9;
     padding: 1rem 2rem;
@@ -355,6 +361,7 @@ a:hover {
     box-shadow: -8px 8px 10px -1px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: -8px 8px 10px -1px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: -8px 8px 10px -1px rgba(0, 0, 0, 0.75);
+
 
     input[type="text"],
     input[type="adhaar"],
@@ -388,7 +395,8 @@ a:hover {
 
     .reg-btn {
       display: block;
-      width: 100%;
+      width: 50%;
+      margin: 0 auto;
       background-color: $button;
       color: #fffffe;
       font-weight: 700;
@@ -398,6 +406,7 @@ a:hover {
       font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 0.5px;
+      margin-top: 3rem;
 
       &:hover {
         background-color: #503abc;
@@ -405,15 +414,28 @@ a:hover {
       }
     }
   }
+  
+  @include tablet{
+    form{
+      margin-top:10%;
+    }
+  }
+
+  @include mobile{
+    form{
+      margin-top: 20%;
+    }
+  }
 }
 
 /*************************************************************************** HOME PAGE STYLING ***************************************************************************************/
 .nav-container {
+  z-index: 10;
   overflow: hidden;
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
-  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.8);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.8);
 }
 header {
   display: flex;
@@ -421,6 +443,7 @@ header {
   justify-content: space-between;
   height: 100px;
   padding: 0 2rem;
+  background: transparent;
   background-color: #e45858;
   color: $textColor-1;
 

@@ -6,15 +6,16 @@ import "./style.scss";
 import Navbar from "./Pages/navbar";
 
 function App() {
+
   return (
     <div className="App">
       <Navbar />
-
       <Routes>
-        <Route path="/Home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
       </Routes>
+      
     </div>
   );
 }
