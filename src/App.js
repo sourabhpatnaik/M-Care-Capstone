@@ -4,6 +4,7 @@ import Login from "./Pages/Login";
 import Home from "./Pages/Home";
 import "./style.scss";
 import Navbar from "./Pages/navbar";
+import ErrorPage from "./Pages/ErrorPage";
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
+        <Route path="/ErrorPage" element={<ErrorPage/>}/>
       </Routes>
       
     </div>

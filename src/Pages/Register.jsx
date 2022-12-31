@@ -1,20 +1,25 @@
 import { Route, Routes } from 'react-router-dom';
 import Login from './Login';
 import { NavLink } from 'react-router-dom';
-import AnimatedPage from './AnimatedPage';
+import AnimatedPage from '../Animations/AnimatedPage';
+import { useEffect, useState } from 'react';
+import AnimatedText from '../Animations/AnimatedText';
 
 
 function Register() {
+
+
   return (
     <AnimatedPage>
     <div className="register-container" >
       
       {/* LEFT CONTAINER */}
       <div className="left-1">
-        <section className="copy">
+        <AnimatedText><section className="copy">
           <h1>Welcome to <span>M-Care</span></h1>
           <p>All your Health tools in One Place</p>
         </section>
+        </AnimatedText>
       </div>
 
 
@@ -22,7 +27,8 @@ function Register() {
       <div className="right-1">
         
         {/* FORM */}
-        <form action="#">
+        <AnimatedText>
+        <form action='#'>
           <section className="copy">
             <h2>Register</h2>
               <p>
@@ -37,18 +43,20 @@ function Register() {
           </section>
           <div className="input-container-name">
             <label htmlFor="fname">Full Name</label>
-            <input id="fname" name="fname" type="text" placeholder='Enter Full Name' />
+            <input id="fname" name="fname" type="text" placeholder='Enter Full Name'/>
           </div>
+          
 
           <div className="input-container-adhar">
             <label htmlFor="fadhar">Aadhar Number</label>
             <input id="fadhaar" name="fadhaar" type="text" placeholder='Enter Aadhar Number' />
           </div>
-
+          
           <div className="input-container-password">
             <label htmlFor="fpass">Password</label>
             <input id="fpass" name="fpass" type="password" placeholder='Enter Password'/>
           </div>
+          
 
           <button className="reg-btn" type="submit">
             Register
@@ -64,6 +72,7 @@ function Register() {
             </p>
           </section>
         </form>
+        </AnimatedText>
       </div>
 
 

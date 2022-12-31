@@ -1,4 +1,4 @@
-import AnimatedPage from "./AnimatedPage";
+import AnimatedPage from "../Animations/AnimatedPage";
 
 
 

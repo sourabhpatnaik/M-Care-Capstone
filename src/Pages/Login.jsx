@@ -1,7 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
 import Register from './Register';
 import { Link } from 'react-router-dom';
-import AnimatedPage from './AnimatedPage';
+import AnimatedPage from '../Animations/AnimatedPage';
+import AnimatedText from '../Animations/AnimatedText';
 
 
 function Login() {
@@ -9,6 +10,7 @@ function Login() {
     <AnimatedPage>
     <div className="login-container">
       <div className="left">
+      <AnimatedText>
       <form action="#">
           <section className="copy">
             <h2>Login</h2>
@@ -51,13 +53,15 @@ function Login() {
             </p>
           </section>
         </form>
+        </AnimatedText>
       </div>
 
       <div className="right">
-        <section className="copy">
+        <AnimatedText><section className="copy">
           <h1>Welcome to M-Care</h1>
           <p>All your Health tools in One Place</p>
         </section>
+        </AnimatedText>
       </div>
 
     </div>
