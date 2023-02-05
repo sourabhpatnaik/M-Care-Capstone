@@ -8,6 +8,7 @@ import AnimatedText from '../Animations/AnimatedText';
 
 function Register() {
 
+  
 
   return (
     <AnimatedPage>

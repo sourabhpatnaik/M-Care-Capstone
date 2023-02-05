@@ -1,14 +1,17 @@
 import AnimatedPage from "../Animations/AnimatedPage";
+import Landing from "../Home components/Landing";
+import About from "../Home components/About";
+import Services from "../Home components/Services";
+
 
 
 
 function Home() {
     return (
         <AnimatedPage>
-        <div className="home-container">
-           <h1>this is home page</h1>
-            <img src="https://cdn.britannica.com/64/182864-050-8975B127/Scene-The-Incredible-Hulk-Louis-Leterrier.jpg" alt="" />
-        </div>
+            <Landing />
+            <About />
+            <Services />
         </AnimatedPage>
     );
 }

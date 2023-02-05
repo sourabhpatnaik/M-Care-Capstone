@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;400;500;700&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;400;500;700&display=swap");
 
 @mixin mobile {
   @media screen and (min-width: 320px) and (max-width: 480px) {
@@ -24,7 +22,7 @@ body {
   padding: 0;
   margin: 0;
   font-weight: 500;
-  font-family: 'Mukta', sans-serif;;
+  font-family: "Mukta", sans-serif;
 }
 
 $primary-blue: #233975;
@@ -34,7 +32,7 @@ $secondaryColor: #db2b39;
 $textColor: #e45858;
 $textColor-1: #543ec2;
 $button: #6246ea;
-$fontFamily: 'Mukta', sans-serif;
+$fontFamily: "Mukta", sans-serif;
 
 h1 {
   font-size: 2.25rem;
@@ -171,7 +169,6 @@ a:hover {
   }
 
   form {
-    
     width: 328px;
     background-color: #d1d1e9;
     padding: 1rem 2rem;
@@ -179,7 +176,7 @@ a:hover {
     box-shadow: 8px 6px 10px -1px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 8px 6px 10px -1px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 8px 6px 10px -1px rgba(0, 0, 0, 0.75);
-    
+
     input[type="text"],
     input[type="text"],
     input[type="password"] {
@@ -201,8 +198,6 @@ a:hover {
         background-color: #ffefef;
       }
     }
-
-    
 
     label {
       display: block;
@@ -231,7 +226,6 @@ a:hover {
         cursor: pointer;
       }
     }
-    
   }
 
   @include tablet {
@@ -279,7 +273,6 @@ a:hover {
 .right {
   background: url("./images/right-img-1.png");
   background-size: cover;
-
 
   .copy {
     color: white;
@@ -364,7 +357,6 @@ a:hover {
     -webkit-box-shadow: -8px 8px 10px -1px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: -8px 8px 10px -1px rgba(0, 0, 0, 0.75);
 
-
     input[type="text"],
     input[type="adhaar"],
     input[type="password"] {
@@ -416,15 +408,15 @@ a:hover {
       }
     }
   }
-  
-  @include tablet{
-    form{
-      margin-top:10%;
+
+  @include tablet {
+    form {
+      margin-top: 10%;
     }
   }
 
-  @include mobile{
-    form{
+  @include mobile {
+    form {
       margin-top: 20%;
     }
   }
@@ -478,6 +470,171 @@ header {
     @include tablet {
       visibility: visible;
       opacity: 1;
+    }
+  }
+}
+
+/****************************************************** Landing  ******************************************************/
+
+.landing-container {
+  display: flex;
+  flex-direction: row;
+  height: 90vh;
+
+  .container-left {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #fafafa;
+
+    h1 {
+      color: #543ec2;
+      margin: 0;
+      font-size: 5rem;
+      line-height: 4rem;
+    }
+
+    h4 {
+      margin: 40px 0;
+      width: 80%;
+      color: #e45858;
+      text-align: center;
+    }
+
+    .learn-btn {
+      display: block;
+      width: 30%;
+      background-color: $button;
+      color: #fffffe;
+      font-weight: 700;
+      border: none;
+      padding: 1rem;
+      border-radius: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      text-align: center;
+      text-decoration: none;
+
+      &:hover {
+        background-color: #503abc;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .container-right {
+    background: url("./images/Landing.jpg");
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+/************************************************************ About Section **********************************************************/
+
+.about-container {
+  height: 90vh;
+  display: flex;
+  flex-direction: row;
+  background-color: #29335c;
+
+  .container-left{
+    background: url("./images/team.jpg");
+    background-size: contain;
+    width: 67%;
+    background-repeat: no-repeat;
+  }
+
+  .container-right{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    text-align: center;
+    margin-left: 1rem;
+
+
+    h1{
+      color: white;
+    }
+    
+    p{
+      color: white;
+    }
+    strong{
+      font-size: 1.2rem;
+      color: #e45858;
+    }
+  }
+}
+
+/************************************************************ Services Section **********************************************************/
+
+.service-container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffdada;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    color: #503abc;
+    font-weight: bolder;
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-left: 5rem;
+
+    .cards {
+      width: 50%;
+      margin-right: 5rem;
+      background-color: #29335c;
+      border-radius: 10px;
+      box-shadow: 13px 11px 14px -2px rgba(0, 0, 0, 0.48);
+      -webkit-box-shadow: 13px 11px 14px -2px rgba(0, 0, 0, 0.48);
+      -moz-box-shadow: 13px 11px 14px -2px rgba(0, 0, 0, 0.48);
+
+      .card-body {
+        padding: 2rem;
+        text-align: center;
+
+        img {
+          width: 50%;
+          border-radius: 8px;
+        }
+        h2 {
+          color: white;
+        }
+        p {
+          color: white;
+        }
+      }
+
+      .card-btn {
+        margin-bottom: 2rem;
+
+        width: 50%;
+        background-color: $button;
+        color: #fffffe;
+        font-weight: 700;
+        border: none;
+        padding: 1rem;
+        border-radius: 8px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        text-align: center;
+
+        &:hover {
+          background-color: #503abc;
+          cursor: pointer;
+        }
+      }
     }
   }
 }
@@ -555,28 +712,28 @@ header {
 }
 
 /***************************************** ERROR PAGE STYLING ****************************************/
-.not-found{
+.not-found {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  h1{
+  h1 {
     font-size: 10rem;
-    opacity: .2;
+    opacity: 0.2;
   }
-  h2{
+  h2 {
     margin-top: -10%;
   }
 
-  .button{
+  .button {
     background-color: #543ec2;
-    padding: .5rem;
+    padding: 0.5rem;
     border-radius: 8px;
     color: white;
     text-decoration: none;
 
-    &:hover{
+    &:hover {
       cursor: pointer;
       background-color: #735fd9;
     }
